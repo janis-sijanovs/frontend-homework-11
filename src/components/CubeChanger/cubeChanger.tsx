@@ -11,17 +11,18 @@ const CubeChanger = () => {
       className="cubeChanger"
     >
 
-      <button
-        className="button"
-        onClick={() => setColor(() => getRandomColor())}
-      >
-        Mainīt kuba krāsu
-      </button>
-
-      <div
-        className="cubeChanger__cube"
-        style={{ backgroundColor: color }}
-      />
+      <div className="flex flex--column">
+        <button
+          className="button"
+          onClick={() => setColor(() => getRandomColor())}
+        >
+          Mainīt kuba krāsu
+        </button>
+        <div
+          className="cubeChanger__cube"
+          style={{ backgroundColor: color }}
+        />
+      </div>
 
     </div>
   );

@@ -12,6 +12,14 @@ const MathBox = ({ mathNumber, multiplication }: MathBoxProps) => {
 
   const buttons = [
     {
+      id: 0,
+      title: 'Reset',
+      mathType: 'Reset',
+      action: () => {
+        setResult(0);
+      },
+    },
+    {
       id: 1,
       title: '+',
       mathType: 'Sum',

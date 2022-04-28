@@ -10,8 +10,12 @@ import TextDisplay from './components/TextDisplay/textDisplay';
 
 const App = () => (
   <div className="App">
-    <MathBox mathNumber={1} multiplication={false} />
-    <MathBox mathNumber={10} multiplication />
+
+    <div className="flex flex--column">
+      <MathBox mathNumber={1} multiplication={false} />
+      <MathBox mathNumber={10} multiplication />
+    </div>
+
     <PizzaAdder />
 
     <div className="flex">

@@ -70,39 +70,36 @@ const ArrayEditor = () => {
     <div
       className="arrayEditor"
     >
-      <div className="flex">
-        {buttons
-          .map(({ title, action, id }) => (
-
-            <button
-              key={id}
-              className="button"
-              onClick={action}
-            >
-              {title}
-            </button>
-
-          ))}
-      </div>
-
-      <div className="flex">
-        {numberArray
-          .filter((val) => val > filter)
-          .map((num) => (
-
-            <button
-              key={num}
-              className="arrayEditor__item"
-              onClick={() => {
-                setNumberArray([...numberArray]
-                  .slice(0, numberArray.indexOf(num))
-                  .concat([...numberArray].slice(numberArray.indexOf(num) + 1)));
-              }}
-            >
-              {num}
-            </button>
-
-          ))}
+      <div className="flex flex--column">
+        <div className="flex">
+          {buttons
+            .map(({ title, action, id }) => (
+              <button
+                key={id}
+                className="button"
+                onClick={action}
+              >
+                {title}
+              </button>
+            ))}
+        </div>
+        <div className="flex">
+          {numberArray
+            .filter((val) => val > filter)
+            .map((num) => (
+              <button
+                key={num}
+                className="arrayEditor__item"
+                onClick={() => {
+                  setNumberArray([...numberArray]
+                    .slice(0, numberArray.indexOf(num))
+                    .concat([...numberArray].slice(numberArray.indexOf(num) + 1)));
+                }}
+              >
+                {num}
+              </button>
+            ))}
+        </div>
       </div>
     </div>
   );

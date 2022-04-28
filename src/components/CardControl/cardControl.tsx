@@ -13,7 +13,7 @@ const CardControl = () => {
     },
     {
       id: 3,
-      title: 'Thirs card',
+      title: 'Third card',
     },
     {
       id: 4,
@@ -60,49 +60,47 @@ const CardControl = () => {
     <div
       className="cardControl"
     >
-      <div className="flex" />
-      {buttons
-        .map(({ title, action, id }) => (
-
-          <button
-            key={id}
-            className="button"
-            onClick={action}
-          >
-            {title}
-          </button>
-
-        ))}
-      <div className="flex">
-        {cards
-          .map((card) => (
-
-            <div
-              key={card.id}
-              className="card"
-            >
+      <div className="flex flex--column">
+        <div className="flex">
+          {buttons
+            .map(({ title, action, id }) => (
               <button
-                className="card__close"
-                onClick={() => {
-                  setCards([...cards]
-                    .slice(0, cards.indexOf(card))
-                    .concat([...cards].slice(cards.indexOf(card) + 1)));
-                }}
+                key={id}
+                className="button"
+                onClick={action}
               >
-                x
+                {title}
               </button>
-
-              <p className="card__text">
-                ID:&nbsp;
-                {card.id}
-              </p>
-              <p className="card__text">
-                Title:&nbsp;
-                {isUppercase ? card.title.toUpperCase() : card.title}
-              </p>
-            </div>
-
-          ))}
+            ))}
+        </div>
+        <div className="flex">
+          {cards
+            .map((card) => (
+              <div
+                key={card.id}
+                className="card"
+              >
+                <button
+                  className="card__close"
+                  onClick={() => {
+                    setCards([...cards]
+                      .slice(0, cards.indexOf(card))
+                      .concat([...cards].slice(cards.indexOf(card) + 1)));
+                  }}
+                >
+                  x
+                </button>
+                <p className="card__text">
+                  ID:&nbsp;
+                  {card.id}
+                </p>
+                <p className="card__text">
+                  TITLE:&nbsp;
+                  {isUppercase ? card.title.toUpperCase() : card.title}
+                </p>
+              </div>
+            ))}
+        </div>
       </div>
 
     </div>

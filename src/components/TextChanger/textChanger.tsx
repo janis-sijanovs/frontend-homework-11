@@ -9,18 +9,19 @@ const TextChanger = () => {
       className="textChanger"
     >
 
-      <button
-        className="button"
-        onClick={() => setText('Nospiests')}
-      >
-        Mainīt tekstu uz &quot;nospiests&quot;
-      </button>
-
-      <p
-        className="textChanger__text"
-      >
-        {text}
-      </p>
+      <div className="flex flex--column">
+        <button
+          className="button"
+          onClick={() => setText('Nospiests')}
+        >
+          Mainīt tekstu uz &quot;nospiests&quot;
+        </button>
+        <p
+          className="textChanger__text"
+        >
+          {text}
+        </p>
+      </div>
 
     </div>
   );

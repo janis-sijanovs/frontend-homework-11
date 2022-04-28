@@ -1,5 +1,9 @@
-.cubeChanger__cube {
-    display: block;
-    width: 50px;
-    height: 50px;
+.textDisplay__input {
+    width: fit-content;
+}
+
+.textDisplay__text {
+    font-size: 50px;
+    justify-self: center;
+    margin: auto;
 }

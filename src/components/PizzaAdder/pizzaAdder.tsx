@@ -9,14 +9,15 @@ const PizzaAdder = () => {
       className="pizzaAdder"
     >
 
-      <button
-        className="button"
-        onClick={() => setPizzaList(`${pizzaList} pica`)}
-      >
-        Pievienot &quot;pica&quot;
-      </button>
-
-      <p>{pizzaList}</p>
+      <div className="flex flex--column">
+        <button
+          className="button"
+          onClick={() => setPizzaList(`${pizzaList} pica`)}
+        >
+          Pievienot &quot;pica&quot;
+        </button>
+        <p>{pizzaList}</p>
+      </div>
 
     </div>
   );

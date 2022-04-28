@@ -9,28 +9,30 @@ const TextDisplay = () => {
     <div
       className="textDisplay"
     >
-      <button
-        className="button"
-        onClick={() => setShowText(!showText)}
-      >
-        Parādīt tekstu
-      </button>
-
-      <input
-        className="textDisplay__input"
-        value={text}
-        onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}
-        placeholder="Ievadi Tekstu!"
-      />
-
-      {showText
-        ? (
-          <p
-            className="textDisplay__text"
+      <div className="flex">
+        <div className="flex flex--column">
+          <button
+            className="button"
+            onClick={() => setShowText(!showText)}
           >
-            {text}
-          </p>
-        ) : null}
+            Parādīt tekstu
+          </button>
+          <input
+            className="textDisplay__input"
+            value={text}
+            onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}
+            placeholder="Ievadi Tekstu!"
+          />
+        </div>
+        {showText
+          ? (
+            <p
+              className="textDisplay__text"
+            >
+              {text}
+            </p>
+          ) : null}
+      </div>
 
     </div>
   );
